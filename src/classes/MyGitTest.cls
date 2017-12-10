@@ -6,9 +6,6 @@ public with sharing class MyGitTest {
 
     public MyGitTest(){
         String userName = UserInfo.getName();
-
-        List<Account> accountList = new List<Account>();
-
     }
 
 }
