@@ -1,0 +1,19 @@
+<apex:page showHeader="true" sidebar="false" controller="Student">
+
+<style>
+    .fame {
+    background-color:red;
+    
+    }
+    </style>
+    <script>
+       function helloClick(){
+       	 alert("Welcome Archita!");
+       }
+    </script>
+
+    <div class="fame" onclick="helloClick()">
+        Hello
+    </div>
+    
+</apex:page>

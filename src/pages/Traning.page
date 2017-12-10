@@ -1,0 +1,31 @@
+<apex:page controller="TrainingController" tabStyle="Account"  sidebar="false" title="Archu"> 
+    <apex:pageBlock title="New Account" >
+        <apex:form >
+            <apex:pageBlockSection title="Information">
+       				 <apex:inputField value="{!accountProperty.name}"/>
+                  	<apex:inputField value="{!accountProperty.type}"/>
+                    <apex:inputField value="{!accountProperty.Industry}"/>
+                 </apex:pageBlockSection>
+
+            <apex:commandButton action="{!saveAccount}" value="Save" id="theButton" reRender="pbBlock" />
+
+        </apex:form>
+    
+    </apex:pageBlock>
+
+<apex:pageBlock title="My Accounts"  >
+    <apex:dataTable value="{!AllAccounts}" var="acc" id="pbBlock">
+        <apex:column headerValue="Action">
+            <apex:form >
+            	<apex:commandLink action="{!deleteAccount}" value="Delete" id="theCommandLink" reRender="pbBlock">
+                    <apex:param name="AccountId" assignTo="{!AccountId}" value="{!acc.Id}"/>
+                </apex:commandLink>
+            </apex:form>
+        </apex:column>
+        <apex:column value="{!acc.name}"/>
+           <apex:column value="{!acc.type}"/>
+         <apex:column value="{!acc.Industry}"/>
+        <apex:column value="{!acc.AnnualRevenue}"/>
+    </apex:dataTable>
+ </apex:pageBlock>
+</apex:page>

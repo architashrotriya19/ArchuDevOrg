@@ -1,0 +1,47 @@
+<apex:page controller="OpportunityDetailDisplayExtension" sidebar="false" tabStyle="Account" cache="true">
+<apex:pageBlock title="Hello">
+<apex:pageMessages />
+<apex:form >
+ <apex:pageBlockSection title="Search Bid Number" columns="2" >
+  <apex:inputText value="{!accoutNumber}"/>
+  <apex:commandButton action="{!searchOpportunityDetail}" value="Search"/>
+  </apex:pageBlockSection>
+    
+</apex:form>  
+  <apex:pageBlockSection id="OppDetails" title="Opportunity Details" columns="1" rendered="{!opportunityDetails.size>0}">
+  <apex:pageBlockTable value="{!opportunityDetails}"  var="Opp">
+      <apex:column HeaderValue="Opportunity Name">
+    <apex:outputLink value="/{!Opp.id}" target="_blank">{!Opp.Name}</apex:outputLink>
+  </apex:column>
+  <apex:column value="{!Opp.StageName}"/>
+  <apex:column value="{!Opp.Account.name}"/> 
+  </apex:pageBlockTable>
+  </apex:pageBlockSection>
+ 
+    <apex:pageBlockSection id="AccountDetail" title="Account Details" columns="1" rendered="{!showAccountTable}">
+ <apex:pageBlockTable value="{!accountDetails}"  var="acc">
+     <apex:column HeaderValue="Account Name">
+      <apex:outputLink value="/{!acc.id}" target="_blank">{!acc.Name}</apex:outputLink>
+          </apex:column>
+ <apex:column value="{!acc.Name}"/>
+ <apex:column value="{!acc.Type}"/>
+ <apex:column value="{!acc.Industry}"/> 
+ </apex:pageBlockTable>
+ </apex:pageBlockSection>
+    
+ <apex:pageBlockSection id="contactDetails" title="Contact Details" columns="1" rendered="{!showAccountTable}">
+ <apex:pageBlockTable value="{!contactDetails}"  var="con">
+     <apex:column HeaderValue="Contact Name">
+         
+      <apex:outputLink value="/{!con.id}" target="_blank">{!con.Name}</apex:outputLink>
+          </apex:column>
+ <apex:column value="{!con.Name}"/>
+ <apex:column value="{!con.email}"/>
+ <apex:column value="{!con.homephone}"/> 
+ <apex:column value="{!con.department}"/> 
+ </apex:pageBlockTable>
+ </apex:pageBlockSection>
+    
+
+</apex:pageBlock>
+</apex:page>

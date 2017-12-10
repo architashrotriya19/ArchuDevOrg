@@ -1,0 +1,71 @@
+<apex:page sidebar="false" showHeader="false" standardStylesheets="false">
+<head>
+    
+        
+    <link href="{!URLFOR($Resource.BootswrapComplete,'BoostWatchTheams/cosmo/bootstrap.min.css')}" rel="stylesheet" />
+  
+  <!-- This files is required for BootStrap CSS -->
+  <link href="{!URLFOR($Resource.BootswrapComplete,'BoostWatchTheams/asset/css/bootswatch.min.css')}" rel="stylesheet" /> 
+  </head>
+    <body>
+        
+        <button class="btn btn-success">Hello</button>
+        <br/>
+        <img src="{!URLFOR($Resource.MyPic)}" alt="baby" class="img-rounded"/>
+        <br/>
+        <table class="table table-striped table-hover ">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Column heading</th>
+      <th>Column heading</th>
+      <th>Column heading</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Column content</td>
+      <td>Column content</td>
+      <td>Column content</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Column content</td>
+      <td>Column content</td>
+      <td>Column content</td>
+    </tr>
+    <tr >
+      <td>3</td>
+      <td>Column content</td>
+      <td>Column content</td>
+      <td>Column content</td>
+    </tr>
+    <tr >
+      <td>4</td>
+      <td>Column content</td>
+      <td>Column content</td>
+      <td>Column content</td>
+    </tr>
+    <tr >
+      <td>5</td>
+      <td>Column content</td>
+      <td>Column content</td>
+      <td>Column content</td>
+    </tr>
+    <tr >
+      <td>6</td>
+      <td>Column content</td>
+      <td>Column content</td>
+      <td>Column content</td>
+    </tr>
+    <tr >
+      <td>7</td>
+      <td>Column content</td>
+      <td>Column content</td>
+      <td>Column content</td>
+    </tr>
+  </tbody>
+</table> 
+    </body>
+</apex:page>

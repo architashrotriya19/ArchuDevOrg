@@ -1,0 +1,3 @@
+<apex:page sidebar="false" showHeader="false" >
+    <flow:interview name="Opportunity_Flow" finishLocation="{!URLFOR('/home/home.jsp')}"/>
+</apex:page>

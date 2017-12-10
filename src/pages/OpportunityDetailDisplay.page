@@ -1,0 +1,11 @@
+<apex:page Controller="OpportunityDetailDisplayExtension" >
+    <apex:form >
+    <apex:pageBlock title="Insert BID" mode="edit">
+         <apex:pageBlockSection columns="1">
+            <input id="thePage:theForm:theButton" type="Input" name="thePage:theForm:theButton" value="" />
+             <apex:commandButton action="{!searchOpportunityDetail}" value="Search" id="theButton"/>      
+              </apex:pageBlockSection>
+               </apex:pageBlock>	
+          
+      </apex:form>
+</apex:page>

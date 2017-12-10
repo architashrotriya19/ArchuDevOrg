@@ -1,0 +1,44 @@
+<apex:page standardController="Contact" extensions="AddMultipleContactExt" sidebar="false" recordSetVar="conList">
+    <apex:form >
+      <apex:pageMessages />
+    	<apex:pageBlock title="New Contacts">
+          
+            <apex:pageBlockSection title="Basic Details"  >
+                 <apex:repeat var="contact" value="{!con}">
+                
+        			<apex:inputField value="{!contact.Title}" /> 		
+                	<apex:inputField value="{!contact.FirstName}"  />
+            		<apex:inputField value="{!contact.LastName}" />
+            		<apex:inputField value="{!contact.Phone}"  />
+                </apex:repeat> 
+                  
+            </apex:pageBlockSection>
+     
+            <apex:pageBlockButtons title="Button">
+        		<apex:commandButton action="{!isSave}" value="Save"/>
+            	<apex:commandButton action="{!isCancel}" value="Cancel" />
+                <apex:commandButton action="{!isaddRow}" value="Add row" />
+                <apex:commandButton action="{!isDelete}" value="Delete"/>    
+            </apex:pageBlockButtons>
+            
+            <apex:pageBlockSection title="Records Added">
+            <apex:pageBlockTable var="con" value="{!ConList}">
+                
+                <apex:column headerValue="Title">
+                <apex:outputField value="{!con.Title}"/>
+                </apex:column>
+                <apex:column headerValue="FirstName">
+                <apex:outputField value="{!con.FirstName}"/>
+                </apex:column>
+                <apex:column headerValue="Last Name">
+                <apex:outputField value="{!con.LastName}"/>
+                </apex:column>
+                <apex:column headerValue="Phone">
+                <apex:outputField value="{!con.Phone}"/>
+                </apex:column>
+            </apex:pageBlockTable>
+            </apex:pageBlockSection>
+     	
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

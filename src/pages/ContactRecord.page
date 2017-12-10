@@ -1,0 +1,15 @@
+<apex:page standardController="Contact" extensions="ContactRecordExt" tabStyle="Contact">
+    
+    <apex:pageBlock >
+        
+        <apex:form >
+            <apex:pageBlockSection >
+                <apex:inputField value="{!newCon.FirstName}" label="First Name"/>
+                <apex:inputField value="{!newCon.LastName}" label="Last Name"/>
+                <apex:commandButton action="{!save}" title="Save" />
+            </apex:pageBlockSection>
+        </apex:form>
+        
+    </apex:pageBlock>
+    
+</apex:page>

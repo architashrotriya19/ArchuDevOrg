@@ -1,0 +1,23 @@
+<apex:page sidebar="false" standardController="Account">
+    <apex:pageBlock >
+        <apex:form >
+    <apex:pageBlockSection columns="2">
+        <apex:pageblockSectionItem helpText="Hello I am help" >
+            <apex:outputLabel value="Account Name" for="account__Name"/>
+        	<apex:inputField id="account__Name" value="{!Account.Name}"/>
+        </apex:pageblockSectionItem> 
+        
+        <apex:pageblockSectionItem helpText="Hello I am test for another field" >
+            <apex:outputLabel value="Account Type" for="account__Type"/>
+        	<apex:inputField id="account__Type" value="{!Account.Type}"/>
+        </apex:pageblockSectionItem>
+        
+        <apex:pageblockSectionItem helpText="Hello I am test for thirrd field" >
+            <apex:outputLabel value="Account Industry" for="thisShouldMatchTheId"/>
+        	<apex:inputField id="thisShouldMatchTheId" value="{!Account.Industry}"/>
+        </apex:pageblockSectionItem>
+        
+     </apex:pageBlockSection>
+            </apex:form>
+    </apex:pageBlock>
+</apex:page>

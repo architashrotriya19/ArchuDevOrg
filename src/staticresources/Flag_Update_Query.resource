@@ -1,0 +1,1 @@
+SELECT Id,name ,CloseDate,Active__c FROM Opportunity WHERE ((CloseDate not in (LAST_N_DAYS:365) and Active__c =true) or ( CloseDate in (LAST_N_DAYS:365) and Active__c =false
