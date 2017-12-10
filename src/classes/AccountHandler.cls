@@ -8,6 +8,7 @@ public class AccountHandler {
             Account a = new Account(Name=accName);
             insert a;
             System.debug('Bravo Andrè! Account created');
+
             return a;
         } catch(Exception e){
             System.Debug('Account not created');
